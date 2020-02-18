@@ -17,12 +17,16 @@
 package com.example.android.navigation
 
 import android.os.Bundle
+<<<<<<< Updated upstream
 import android.view.LayoutInflater
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.view.ViewGroup
+=======
+import android.view.*
+>>>>>>> Stashed changes
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
@@ -41,15 +45,36 @@ class TitleFragment : Fragment() {
                 // We will have to switch this to using an anonymous function, since
                 // createNavigateOnClickListener cannot take NavDirections
                 Navigation.createNavigateOnClickListener(R.id.action_titleFragment_to_gameFragment))
+<<<<<<< Updated upstream
+=======
+        // TODO (02) Create the new menu resource
+        // Right click on the res folder within the Android project and select New Resource File
+        // Name it overflow_menu with resource type menu.  Add an About menu item with the ID of
+        // the aboutFragment.
+        // TODO (03) Call setHasOptionsMenu(true)
+        // This tells Android that our fragment has an Options Menu, so it will call
+        // onCreateOptionsMenu
+>>>>>>> Stashed changes
         setHasOptionsMenu(true)
         return binding.root
     }
 
+<<<<<<< Updated upstream
+=======
+    // TODO (04) Override onCreateOptionsMenu
+    // Use the passed-in MenuInflater to inflate the overflow_menu
+>>>>>>> Stashed changes
     override fun onCreateOptionsMenu(menu: Menu?, inflater: MenuInflater?) {
         super.onCreateOptionsMenu(menu, inflater)
         inflater?.inflate(R.menu.overflow_menu, menu)
     }
 
+<<<<<<< Updated upstream
+=======
+    // TODO (05) Override onOptionsItemSelected
+    // Return true if NavigationUI.onNavDestinationSelected returns true, else return
+    // super.onOptionsItemSelected.
+>>>>>>> Stashed changes
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
         return NavigationUI.onNavDestinationSelected(item!!,
                 view!!.findNavController())
